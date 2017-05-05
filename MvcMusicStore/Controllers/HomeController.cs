@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using MvcMusicStore.Models;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
-using MvcMusicStore.Models;
 
 namespace MvcMusicStore.Controllers
 {
@@ -10,7 +10,7 @@ namespace MvcMusicStore.Controllers
         //
         // GET: /Home/
 
-        MusicStoreEntities storeDB = new MusicStoreEntities();
+        private MusicStoreEntities storeDB = new MusicStoreEntities();
 
         public ActionResult Index()
         {

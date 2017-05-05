@@ -36,8 +36,8 @@ body
 
 #promotion
 {
-	height: 300px; 
-	width: 700px; 
+	height: 300px;
+	width: 700px;
 	background: url(/content/Images/home-showcase.png) no-repeat;
 }
 
@@ -103,7 +103,7 @@ ul#album-list li a span
 	clear: both;
 	display: inline-block;
 	padding: 5px;
-	margin-top: 10px; 
+	margin-top: 10px;
 	border: 1px;
 	background: #5e5b54;
 	color: #fff;
