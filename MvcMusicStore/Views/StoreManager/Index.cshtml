@@ -1,5 +1,10 @@
 ﻿@model IEnumerable<MvcMusicStore.Models.Album>
 
+
+@* My own helper function.
+    This helper method takes a string and a maximum length to allow. 
+    If the text supplied is shorter than the length specified, the helper outputs it as-is.
+    If it is longer, then it truncates the text and renders “…” for the remainder*@
 @helper Truncate(string input, int length)
 {
     if (input.Length <= length) {
@@ -41,10 +46,10 @@
             @Html.DisplayFor(modelItem => item.Genre.Name)
         </td>
         <td>
-            @Truncate(item.Artist.Name, 25)
+            @Html.DisplayFor(Truncate(item.Artist.Name, 25))
         </td>
         <td>
-            @Truncate(item.Title, 25)
+            @Html.DisplayFor(Truncate(item.Title, 25))
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Price)

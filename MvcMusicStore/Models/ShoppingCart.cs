@@ -30,9 +30,7 @@ namespace MvcMusicStore.Models
         public void AddToCart(Album album)
         {
             // Get the matching cart and album instances
-            var cartItem = storeDB.Carts.SingleOrDefault(
-c => c.CartId == ShoppingCartId
-&& c.AlbumId == album.AlbumId);
+            var cartItem = storeDB.Carts.SingleOrDefault( c => c.CartId == ShoppingCartId && c.AlbumId == album.AlbumId);
 
             if (cartItem == null)
             {
@@ -60,9 +58,7 @@ c => c.CartId == ShoppingCartId
         public int RemoveFromCart(int id)
         {
             // Get the cart
-            var cartItem = storeDB.Carts.Single(
-cart => cart.CartId == ShoppingCartId
-&& cart.RecordId == id);
+            var cartItem = storeDB.Carts.Single(cart => cart.CartId == ShoppingCartId && cart.RecordId == id);
 
             int itemCount = 0;
 

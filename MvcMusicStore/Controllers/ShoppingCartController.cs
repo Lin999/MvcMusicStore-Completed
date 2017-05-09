@@ -11,7 +11,7 @@ namespace MvcMusicStore.Controllers
 
         //
         // GET: /ShoppingCart/
-
+ 
         public ActionResult Index()
         {
             var cart = ShoppingCart.GetCart(this.HttpContext);
